@@ -50,6 +50,17 @@ debugMode F
 Turns off debug mode
   """
   print(helpDisplay)
+ 
+def about() -> None:
+  about = """
+This program was created by Christopher Durr on December 9th 2016
+email: cdurr @ uci.edu 
+Version: 0.02
+Last Updated: December 9th 2016
+
+Feel free to contribute to the program. 
+ """
+  return 
 def vectorAlreadyExists(vectorName) -> bool:
   """Checks to see if a given vector already exists"""
   vectorExists = False
@@ -159,6 +170,8 @@ def runProgram() -> None:
         debugMode = False
       else:
         print("Can't understand argument given")
+    if command == 'about':
+      about()
     else:
       print("That command doesn't exist!")
   
